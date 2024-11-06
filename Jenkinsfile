@@ -6,7 +6,9 @@ pipeline {
                 echo 'Start Execute'
                 script {
                     powershell '''
-                        C:\\test-script\\myscript.ps1
+                        Write-Output "Hello World"
+                        $date = Get-Date
+                        Write-Output "Current Date and Time: $date"
                     '''
                 }
             }
