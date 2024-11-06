@@ -13,6 +13,14 @@ pipeline {
                 }
             }
         }
+        stage('Run Powershell Command (File)') {
+            steps {
+                echo 'Start Execute'
+                script {
+                    powershell './myscript.ps1'
+                }
+            }
+        }
         stage('Build') {
             steps {
                 bat 'npm install'
